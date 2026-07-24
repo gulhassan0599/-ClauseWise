@@ -93,7 +93,7 @@ ClauseWise is structured as a monorepo, making it easy to deploy the frontend an
    - `GROQ_API_KEY` = `your_actual_api_key_here`
 6. In **Settings** -> **Networking**, click **Generate Domain**.
 
-*(Don't forget to update the `VITE_API_URL` in your frontend code to point to your new Railway backend domain!)*
+*(Don't forget to add `VITE_API_BASE_URL` to your Vercel Environment Variables so the frontend knows how to reach your new Railway backend domain!)*
 
 ---
 
