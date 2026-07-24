@@ -12,14 +12,21 @@ const Navbar = () => {
           <span className="text-gradient">ClauseWise</span>
         </Link>
         
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* Mobile Theme Toggle & Hamburger */}
+        <div className="d-flex align-items-center gap-2 order-lg-last">
+          <div className="d-lg-none">
+            <ThemeToggle />
+          </div>
+          
+          <button 
+            className="navbar-toggler border-0 px-2" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
         
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center gap-2">
@@ -33,7 +40,8 @@ const Navbar = () => {
                 Analyze Contract
               </Link>
             </li>
-            <li className="nav-item ms-2 ps-3 border-start" style={{ borderColor: 'var(--border-color)' }}>
+            {/* Desktop Theme Toggle */}
+            <li className="nav-item ms-2 ps-3 border-start d-none d-lg-block" style={{ borderColor: 'var(--border-color)' }}>
               <ThemeToggle />
             </li>
           </ul>
