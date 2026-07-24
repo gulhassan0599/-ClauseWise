@@ -68,7 +68,9 @@ const AnalysisPage = () => {
       {step === 'dashboard' && (
         <div className="d-flex flex-column gap-3 page-fade-in pb-3">
           <Dashboard data={analysisData} onReset={handleReset} />
-          <Chatbot contractText={extractedText} analysisData={analysisData} />
+          {analysisData?.isContract !== false && (
+            <Chatbot contractText={extractedText} analysisData={analysisData} />
+          )}
         </div>
       )}
     </div>
