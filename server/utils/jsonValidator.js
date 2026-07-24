@@ -13,14 +13,24 @@ export const validateAndParseJson = (jsonString, requiredFields = ['isContract',
     // 2. Safely parse JSON
     const parsedData = JSON.parse(cleanJsonString);
 
-    // 3. Validate required fields
-    if (requiredFields && requiredFields.length > 0) {
-      const missingFields = requiredFields.filter(field => !(field in parsedData));
-      
+    // 3. Validate required fields conditionally based on isContract
+    if (parsedData.isContract === false) {
+      // It's a rejection, so we don't expect a summary or other analysis fields
+      const rejectionFields = ['isContract', 'reason', 'message'];
+      const missingFields = rejectionFields.filter(field => !(field in parsedData));
       if (missingFields.length > 0) {
-        const errorMsg = `Missing required fields from AI response: ${missingFields.join(', ')}`;
-        logger.warn(`JSON Validation Error: ${errorMsg}`);
-        return { success: false, data: null, error: errorMsg };
+        return { success: false, data: null, error: `Missing rejection fields: ${missingFields.join(', ')}` };
+      }
+    } else {
+      // It is a contract, so validate the standard required fields
+      if (requiredFields && requiredFields.length > 0) {
+        const missingFields = requiredFields.filter(field => !(field in parsedData));
+        
+        if (missingFields.length > 0) {
+          const errorMsg = `Missing required fields from AI response: ${missingFields.join(', ')}`;
+          logger.warn(`JSON Validation Error: ${errorMsg}`);
+          return { success: false, data: null, error: errorMsg };
+        }
       }
     }
 
