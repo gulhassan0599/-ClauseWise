@@ -1,15 +1,8 @@
 import multer from 'multer';
 import path from 'path';
 
-// Set up storage engine
-const storage = multer.diskStorage({
-  destination(req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename(req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
-  },
-});
+// Set up memory storage instead of disk storage to prevent crashes on cloud providers (Railway/Vercel)
+const storage = multer.memoryStorage();
 
 // File filter to only allow PDFs
 const fileFilter = (req, file, cb) => {

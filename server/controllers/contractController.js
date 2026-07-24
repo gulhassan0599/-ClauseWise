@@ -21,10 +21,10 @@ export const uploadContract = async (req, res, next) => {
       });
     }
 
-    const filePath = req.file.path;
+    const fileBuffer = req.file.buffer;
 
-    // 2. Extract text from the PDF using pdf-parse
-    const extractedText = await extractTextFromPdf(filePath);
+    // 2. Extract text from the PDF using pdf-parse (now passing the memory buffer)
+    const extractedText = await extractTextFromPdf(fileBuffer);
 
     // 3. Send extracted text to Groq for analysis
     const analysisResult = await analyzeContractDocument(extractedText);
