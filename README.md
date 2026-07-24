@@ -8,7 +8,7 @@
 
 **ClauseWise** is a modern, intelligent web application designed to help individuals and professionals rapidly analyze dense legal contracts. It automatically extracts text from PDF documents, identifies risky clauses, highlights important terms, and allows you to chat directly with an AI assistant about your specific contract.
 
-🌐 **Live Demo:** [Insert Live URL Here] *<-- (Update this after deployment)*
+🌐 **Live Demo:** https://clause-wise-chatbot.vercel.app/
 
 ---
 
@@ -36,7 +36,7 @@ Follow these instructions to set up the project locally on your machine.
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/clausewise.git
+git clone https://github.com/gulhassan0599/clausewise.git
 cd clausewise
 ```
 
