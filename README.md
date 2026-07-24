@@ -22,7 +22,7 @@
 ## 🛠️ Technology Stack
 - **Frontend:** React 19, Vite, React Router, Bootstrap 5, jsPDF, React-Markdown.
 - **Backend:** Node.js, Express, Multer (File Uploads), pdf-parse.
-- **AI Integration:** Groq API (`llama-3.1-8b-instant`) for lightning-fast inference.
+- **AI Integration:** Groq API (`openai/gpt-oss-120b`) for lightning-fast inference.
 
 ---
 
