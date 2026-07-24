@@ -71,6 +71,32 @@ npm run dev
 
 ---
 
+## 🌍 Deployment
+
+ClauseWise is structured as a monorepo, making it easy to deploy the frontend and backend independently to modern cloud providers.
+
+### Frontend Deployment (Vercel)
+1. Push your repository to GitHub.
+2. Log into [Vercel](https://vercel.com/) and click **Add New Project**.
+3. Import your `clausewise` repository.
+4. In the "Framework Preset" dropdown, select **Vite**.
+5. Set the **Root Directory** to `client`.
+6. Click **Deploy**.
+
+### Backend Deployment (Railway)
+1. Log into [Railway](https://railway.app/) and click **New Project** -> **Deploy from GitHub repo**.
+2. Select your `clausewise` repository.
+3. Once created, immediately go to the service **Settings** -> **Build**.
+4. Set the **Root Directory** to `/server`. (This tells Railway to ignore the frontend).
+5. Go to the **Variables** tab and add your Environment Variables:
+   - `PORT` = `5000`
+   - `GROQ_API_KEY` = `your_actual_api_key_here`
+6. In **Settings** -> **Networking**, click **Generate Domain**.
+
+*(Don't forget to update the `VITE_API_URL` in your frontend code to point to your new Railway backend domain!)*
+
+---
+
 ## 📂 Project Structure
 ```text
 clausewise/
