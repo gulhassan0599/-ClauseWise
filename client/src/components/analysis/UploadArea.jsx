@@ -46,7 +46,7 @@ const UploadArea = ({ onFileUpload, error }) => {
         <p className="text-muted mb-4">
           Click anywhere in this box to browse and select your PDF file.<br/>
           <small className="text-warning fw-medium">
-            (Optimal for documents under 15 pages due to free-tier AI limits)
+            (Optimal for documents under 15 pages)
           </small>
         </p>
         <button className="btn btn-gradient px-4 py-2 rounded-pill fw-bold">
