@@ -6,6 +6,33 @@ const Dashboard = ({ data, onReset }) => {
 
   if (!data) return null;
 
+  // Handle irrelevant/non-contract documents gracefully
+  if (data.isContract === false) {
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center py-5 page-fade-in text-center">
+        <div className="p-4 rounded-4 glass-panel border-danger border-opacity-50" style={{ maxWidth: '500px' }}>
+          <div className="display-4 mb-3">⚠️</div>
+          <h3 className="fw-bold text-danger mb-2">Invalid Document</h3>
+          
+          <p className="text-muted fw-medium mb-3">
+            We analyzed your document but could not find any legal contract clauses. Please make sure to upload a relevant legal agreement.
+          </p>
+          
+          <div className="p-3 bg-danger bg-opacity-10 rounded text-danger small mb-4 text-start">
+            <strong>AI Note:</strong> {data.reason || "This document does not appear to be a legal contract."}
+          </div>
+          
+          <button 
+            className="btn btn-outline-danger rounded-pill px-4 fw-bold hover-lift"
+            onClick={onReset}
+          >
+            Upload a Different File
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   const flaggedCount = data.riskyClauses?.length || 0;
 
   return (
