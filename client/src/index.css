@@ -130,6 +130,9 @@ body {
   background-color: rgba(59, 130, 246, 0.1);
   color: #3b82f6;
 }
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) brightness(100%);
+}
 
 /* Chat Input Styling */
 .chat-input {
