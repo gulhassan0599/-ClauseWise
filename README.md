@@ -6,29 +6,84 @@
 ![Node.js](https://img.shields.io/badge/Node.js-Backend-339933.svg?logo=node.js)
 ![Groq](https://img.shields.io/badge/Groq-AI-f55036.svg)
 
-**ClauseWise** is a modern, intelligent web application designed to help individuals and professionals rapidly analyze dense legal contracts. It automatically extracts text from PDF documents, identifies risky clauses, highlights important terms, and allows you to chat directly with an AI assistant about your specific contract.
+## 📖 What is ClauseWise?
+**ClauseWise** is a modern, intelligent web application designed to help individuals and professionals rapidly analyze dense legal contracts. 
 
-🌐 **Live Demo:** https://clause-wise-chatbot.vercel.app/
+### The Problem It Solves
+Legal contracts are intentionally dense, filled with jargon, and notoriously difficult for the average person to understand. When renting an apartment, signing an employment offer, or agreeing to terms of service, people often sign without fully understanding the risks they are taking on. Hiring a lawyer for everyday contracts is prohibitively expensive. 
+**ClauseWise solves this by acting as your personal, free AI legal assistant.** It breaks down complex legalese into beginner-friendly English, automatically identifies hidden predatory clauses, highlights important terms you need to know, and empowers you to chat directly with your contract.
+
+### Who is it for?
+- **Everyday Consumers:** Renters, freelancers, and employees who want to understand what they are signing.
+- **Small Business Owners:** Founders who need a quick first-pass analysis of vendor or partnership agreements.
+- **Professionals:** Anyone looking to save hours of manual reading.
 
 ---
 
-## ✨ Key Features
-- **📄 Instant PDF Extraction:** Securely parse and extract text directly from uploaded PDF contracts.
-- **🚨 Risk Analysis:** Automatically flags predatory, vague, or high-risk clauses with severity levels and explanations.
-- **💬 Interactive AI Chatbot:** Ask specific questions about your uploaded contract and get instant, context-aware answers.
-- **🌙 Glassmorphism UI:** A stunning, fully responsive interface featuring seamless Dark/Light mode toggling.
+## 🌐 Live Demo
+**Test the application live here:** [https://clause-wise-chatbot.vercel.app/](https://clause-wise-chatbot.vercel.app/)
+
+---
+
+## ✨ Features
+ClauseWise is packed with features designed to make legal analysis effortless:
+- **📄 Instant PDF Extraction:** Securely parse and extract text directly from uploaded PDF contracts. Completely stateless—your files are processed in RAM and instantly deleted to protect your privacy.
+- **🚨 Risk Analysis:** Automatically flags predatory, vague, or high-risk clauses (e.g., unlimited liability, automatic renewals). Gives severity levels and explains *why* it matters.
+- **📌 Important Clause Highlighting:** Summarizes the most critical terms of the contract (payment terms, termination conditions) so you don't miss them.
+- **💬 Interactive AI Chatbot:** Ask specific questions about your uploaded contract and get instant, context-aware answers in real-time.
+- **🌙 Glassmorphism UI:** A stunning, fully responsive interface featuring seamless Dark/Light mode toggling for comfortable reading.
 - **⬇️ Downloadable Reports:** Generate professional, color-coded PDF reports of the AI's analysis for your records.
-
-## 🛠️ Technology Stack
-- **Frontend:** React 19, Vite, React Router, Bootstrap 5, jsPDF, React-Markdown.
-- **Backend:** Node.js, Express, Multer (File Uploads), pdf-parse.
-- **AI Integration:** Groq API (`openai/gpt-oss-120b`) for lightning-fast inference.
+- **🛡️ Smart Document Detection:** Automatically rejects non-contract documents (like recipes or blank pages) to save processing power and ensure accuracy.
 
 ---
 
-## 🚀 Getting Started
+## 🤖 The AI Feature: How It Works
+ClauseWise's core functionality relies on advanced Large Language Models to read and understand legal text.
 
-Follow these instructions to set up the project locally on your machine.
+### What it does:
+When a user uploads a PDF, the backend extracts the raw text and feeds it to the AI along with a strictly engineered **System Prompt**. The AI analyzes the text, determines the document type, assigns a confidence and overall risk score, and structures the output exactly into a requested JSON format. The frontend then parses this JSON to build the interactive dashboard.
+
+### The System Prompt & Instructions:
+We engineered a robust system prompt to ensure the AI behaves responsibly and securely. Key instructions include:
+1. **Identity & Constraints:** "You are ClauseWise... You are not a lawyer and must never claim to provide legal advice."
+2. **Validation:** "Determine whether the uploaded document is a legal contract. If it is NOT, do NOT analyze it. Return the rejection schema."
+3. **Extraction:** "Identify the contract type, assess the risk level, identify risky clauses (e.g., Broad Liability, Unfair Payment Terms), and explain why each matters."
+4. **Tone:** "Your writing should always be Professional, Neutral, Beginner-friendly, and Clear. Avoid legal jargon whenever possible."
+5. **Output Formatting:** "Return ONLY valid JSON. Never wrap the JSON inside Markdown. Never hallucinate facts."
+
+---
+
+## 🛠️ Tools, Services, & AI Models
+To build a fast, secure, and beautiful application, ClauseWise utilizes the following stack:
+
+- **Frontend:** React 19, Vite, React Router DOM, Bootstrap 5 (Custom CSS), jsPDF (Report generation), React-Markdown.
+- **Backend:** Node.js, Express, Multer (Memory Storage for secure PDF uploads), pdf-parse.
+- **AI Integration:** [Groq API](https://groq.com/) utilizing the **`openai/gpt-oss-120b`** model. This provides lightning-fast inference speeds, allowing the backend to process massive contracts and return JSON structured analysis in seconds.
+- **Hosting:** 
+  - Frontend: Vercel
+  - Backend: Railway
+
+---
+
+## 📸 Screenshots
+
+*(Replace the placeholder image paths below with the actual paths to your screenshots)*
+
+### 1. The Dashboard & Analysis
+![Dashboard Overview](./client/public/screenshot-dashboard.png)
+*The main dashboard showing the overall risk score, summary, and flagged clauses.*
+
+### 2. Risk Detection
+![Risky Clauses](./client/public/screenshot-risky.png)
+*Detailed breakdown of risky clauses, their severity, and why they matter to the user.*
+
+### 3. Interactive Chatbot
+![AI Chatbot](./client/public/screenshot-chat.png)
+*The user asking the AI assistant specific questions about their uploaded contract.*
+
+---
+
+## 🚀 How to Run the Project Locally
 
 ### 1. Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
@@ -46,7 +101,7 @@ Navigate to the server directory, install dependencies, and configure your envir
 cd server
 npm install
 ```
-Rename the `.env.example` file to `.env` and insert your Groq API key:
+Rename the `.env.example` file to `.env` (or create one) and insert your Groq API key:
 ```env
 PORT=5000
 GROQ_API_KEY=your_actual_groq_api_key_here
@@ -63,37 +118,13 @@ Open a new terminal tab, navigate to the client directory, and install dependenc
 cd client
 npm install
 ```
+*(Optional)* If testing against your local backend, ensure your `.env` or configuration points `VITE_API_BASE_URL` to `http://localhost:5000/api`.
+
 Start the frontend development server:
 ```bash
 npm run dev
 ```
 *(The React app will run on `http://localhost:5173`)*
-
----
-
-## 🌍 Deployment
-
-ClauseWise is structured as a monorepo, making it easy to deploy the frontend and backend independently to modern cloud providers.
-
-### Frontend Deployment (Vercel)
-1. Push your repository to GitHub.
-2. Log into [Vercel](https://vercel.com/) and click **Add New Project**.
-3. Import your `clausewise` repository.
-4. In the "Framework Preset" dropdown, select **Vite**.
-5. Set the **Root Directory** to `client`.
-6. Click **Deploy**.
-
-### Backend Deployment (Railway)
-1. Log into [Railway](https://railway.app/) and click **New Project** -> **Deploy from GitHub repo**.
-2. Select your `clausewise` repository.
-3. Once created, immediately go to the service **Settings** -> **Build**.
-4. Set the **Root Directory** to `/server`. (This tells Railway to ignore the frontend).
-5. Go to the **Variables** tab and add your Environment Variables:
-   - `PORT` = `5000`
-   - `GROQ_API_KEY` = `your_actual_api_key_here`
-6. In **Settings** -> **Networking**, click **Generate Domain**.
-
-*(Don't forget to add `VITE_API_BASE_URL` to your Vercel Environment Variables so the frontend knows how to reach your new Railway backend domain!)*
 
 ---
 
@@ -103,15 +134,15 @@ clausewise/
 ├── client/                # React Frontend
 │   ├── public/
 │   └── src/
-│       ├── components/    # Reusable UI components (Dashboard, Chatbot, etc.)
+│       ├── components/    # Reusable UI components (Navbar, UploadArea, Dashboard, Chatbot)
+│       ├── pages/         # Route pages (LandingPage, AnalysisPage)
 │       ├── services/      # Frontend API fetch logic
-│       └── utils/         # PDF Generation utility
+│       └── utils/         # PDF Generation logic (jsPDF)
 └── server/                # Node.js/Express Backend
-    ├── config/            # External API configurations (Groq)
     ├── controllers/       # Route request handlers
-    ├── middlewares/       # Error handling & rate limiting
-    ├── prompts/           # LLM System Prompts
-    ├── routes/            # Express API routing
+    ├── middlewares/       # File upload (Multer memory storage) & Error handling
+    ├── prompts/           # LLM System Prompts (JSON schemas, strict rules)
+    ├── routes/            # Express API routing (/api/contracts)
     └── services/          # Core Business Logic (PDF parsing, AI orchestration)
 ```
 
