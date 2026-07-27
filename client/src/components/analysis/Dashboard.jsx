@@ -15,11 +15,13 @@ const Dashboard = ({ data, onReset }) => {
           <h3 className="fw-bold text-danger mb-2">Invalid Document</h3>
           
           <p className="text-muted fw-medium mb-3">
-            We analyzed your document but could not find any legal contract clauses. Please make sure to upload a relevant legal agreement.
+            {data.isExtractionError 
+              ? "We could not extract any text from your document. Please ensure it is a text-based PDF and not a scanned image."
+              : "We analyzed your document but could not find any legal contract clauses. Please make sure to upload a relevant legal agreement."}
           </p>
           
           <div className="p-3 bg-danger bg-opacity-10 rounded text-danger small mb-4 text-start">
-            <strong>AI Note:</strong> {data.reason || "This document does not appear to be a legal contract."}
+            <strong>{data.isExtractionError ? 'Error Details:' : 'AI Note:'}</strong> {data.reason || "This document does not appear to be a legal contract."}
           </div>
           
           <button 
@@ -87,8 +89,7 @@ const Dashboard = ({ data, onReset }) => {
             }}
             onClick={() => setActiveTab('summary')}
           >
-            <span className="d-none d-sm-inline">📄 Summary</span>
-            <span className="d-inline d-sm-none">📄</span>
+            <span>📄 Summary</span>
           </button>
           <button 
             className={`flex-fill py-3 border-0 bg-transparent fw-bold ${activeTab === 'risky' ? 'text-danger' : 'text-muted'}`}
@@ -99,8 +100,7 @@ const Dashboard = ({ data, onReset }) => {
             }}
             onClick={() => setActiveTab('risky')}
           >
-            <span className="d-none d-sm-inline">🚨 Risky Clauses</span>
-            <span className="d-inline d-sm-none">🚨</span>
+            <span>🚨 Risky Clauses</span>
           </button>
           <button 
             className={`flex-fill py-3 border-0 bg-transparent fw-bold ${activeTab === 'important' ? 'text-success' : 'text-muted'}`}
@@ -111,8 +111,7 @@ const Dashboard = ({ data, onReset }) => {
             }}
             onClick={() => setActiveTab('important')}
           >
-            <span className="d-none d-sm-inline">📌 Important</span>
-            <span className="d-inline d-sm-none">📌</span>
+            <span>📌 Important</span>
           </button>
         </div>
 

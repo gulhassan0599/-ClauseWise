@@ -2,7 +2,7 @@ import React from 'react';
 
 const HowItWorks = () => {
   const steps = [
-    { num: '1', title: 'Upload Contract', text: 'Simply upload your legal agreement in PDF format securely.' },
+    { num: '1', title: 'Upload Contract', text: 'Upload your text-based legal agreement in PDF format securely (scanned images and non-PDF files are not supported).' },
     { num: '2', title: 'AI Processing', text: 'Our system reads the document and identifies the critical clauses.' },
     { num: '3', title: 'Review Results', text: 'Get a plain English summary, risk score, and chat with the AI for clarity.' },
   ];

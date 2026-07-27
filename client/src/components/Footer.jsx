@@ -10,7 +10,7 @@ const Footer = () => {
           <Link to="/analysis" className="text-decoration-none text-muted hover-lift d-inline-block">Analyze Contract</Link>
         </div>
         <p className="mb-0 small">
-          &copy; {new Date().getFullYear()} ClauseWise. <br />
+          &copy; {new Date().getFullYear()} ClauseWise, All rights are reserved. <br />
           <span className="fst-italic text-warning">This application does not provide legal advice.</span>
         </p>
       </div>

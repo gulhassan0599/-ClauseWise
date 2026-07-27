@@ -46,8 +46,13 @@ const AnalysisPage = () => {
         throw new Error('Failed to retrieve valid data from server.');
       }
     } catch (err) {
-      setError(err.message);
-      setStep('upload');
+      const errorData = {
+        isContract: false,
+        isExtractionError: true,
+        reason: err.message || "Failed to process the document."
+      };
+      setAnalysisData(errorData);
+      setStep('dashboard');
     }
   };
 
