@@ -112,19 +112,19 @@ ClauseWise addresses this problem by providing an AI-powered first-pass analysis
 
 ClauseWise is designed for anyone who needs to understand a legal contract before signing it.
 
-### Students
+#### Students
 Review internship agreements, scholarship contracts, university documents, or accommodation leases.
 
-### Employees
+#### Employees
 Analyze employment contracts, NDAs, confidentiality agreements, and offer letters before accepting a job.
 
-### Freelancers
+#### Freelancers
 Understand client agreements, payment terms, intellectual property clauses, and project obligations.
 
-### Small Business Owners
+#### Small Business Owners
 Review vendor contracts, partnership agreements, service contracts, and procurement documents.
 
-### General Users
+#### General Users
 Anyone who wants a quick, beginner-friendly explanation of a legal document before making an important decision.
 
 > **Note:** ClauseWise is intended as an educational and informational assistant. It does **not** replace professional legal advice.
