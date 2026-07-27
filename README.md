@@ -162,33 +162,8 @@ Explore the complete source code on GitHub:
 
 # 🎬 Demo GIF
 
-> **Coming Soon**
-
-Replace the placeholder below with a short GIF demonstrating the application's workflow.
-
-```
-+------------------------------------------------------------+
-|                                                            |
-|                 PLACE DEMO GIF HERE                        |
-|                                                            |
-| Suggested workflow:                                        |
-|                                                            |
-| 1. Upload Contract PDF                                     |
-| 2. AI Analysis Begins                                      |
-| 3. Dashboard Appears                                       |
-| 4. Risk Detection                                          |
-| 5. Chat with Contract                                      |
-| 6. Download PDF Report                                     |
-|                                                            |
-+------------------------------------------------------------+
-```
-
-Example Markdown:
-
-```md
-![ClauseWise Demo](assets/demo.gif)
-```
-
+![ClauseWise Demo](screenshots/demo.gif)
+ 
 ---
 
 # ✨ Key Features
@@ -617,26 +592,13 @@ ClauseWise/
 
 # 📸 Screenshots
 
-> Replace the placeholders below with actual screenshots before submission.
-
 ---
 
 ## 🏠 Landing Page
 
 Displays the modern homepage where users can learn about ClauseWise and upload a contract for analysis.
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│                  INSERT LANDING PAGE                       │
-│                    SCREENSHOT HERE                         │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
-
-```md
-![Landing Page](screenshots/landing-page.png)
-```
+![Landing Page](screenshots/landing-page.jpeg)
 
 ---
 
@@ -644,18 +606,7 @@ Displays the modern homepage where users can learn about ClauseWise and upload a
 
 Shows the contract upload interface and the generated AI analysis dashboard.
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│                 INSERT ANALYSIS DASHBOARD                  │
-│                    SCREENSHOT HERE                         │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
-
-```md
 ![Analysis Dashboard](screenshots/dashboard.png)
-```
 
 ---
 
@@ -663,18 +614,7 @@ Shows the contract upload interface and the generated AI analysis dashboard.
 
 Illustrates how ClauseWise highlights potentially risky clauses and explains why they matter.
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│                  INSERT RISK ANALYSIS                      │
-│                    SCREENSHOT HERE                         │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
-
-```md
 ![Risk Detection](screenshots/risk-analysis.png)
-```
 
 ---
 
@@ -682,37 +622,9 @@ Illustrates how ClauseWise highlights potentially risky clauses and explains why
 
 Demonstrates the interactive chatbot answering questions about the uploaded contract.
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│                  INSERT CHATBOT SCREEN                     │
-│                    SCREENSHOT HERE                         │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
-
-```md
 ![AI Chatbot](screenshots/chatbot.png)
-```
 
 ---
-
-## 📑 Downloadable PDF Report
-
-Shows the generated contract analysis report that users can save for future reference.
-
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│                  INSERT PDF REPORT                         │
-│                    SCREENSHOT HERE                         │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
-
-```md
-![PDF Report](screenshots/pdf-report.png)
-```
 
 # 🚀 Installation & Local Setup
 
