@@ -88,9 +88,11 @@ ClauseWise was built to bridge this gap by providing an accessible AI-powered as
 
 ClauseWise is **not a replacement for a lawyer**. Instead, it serves as an intelligent first-review assistant that helps users gain confidence and awareness before seeking professional legal advice when necessary.
 
+---
+
 # 🎯 The Problem & Target Audience
 
-## The Problem
+### The Problem
 
 Legal contracts are an essential part of everyday life, but they are often written in complex legal language that can be difficult for non-lawyers to understand. Whether signing a rental agreement, employment contract, freelance agreement, or business partnership, many people accept terms without fully understanding their rights, obligations, or potential risks.
 
@@ -106,9 +108,7 @@ As a result, users may unknowingly agree to unfavorable conditions, unnecessary 
 
 ClauseWise addresses this problem by providing an AI-powered first-pass analysis that converts complex legal contracts into clear, understandable insights within seconds.
 
----
-
-## 👥 Target Audience
+### 👥 Target Audience
 
 ClauseWise is designed for anyone who needs to understand a legal contract before signing it.
 
@@ -139,17 +139,13 @@ Anyone who wants a quick, beginner-friendly explanation of a legal document befo
 
 👉 **https://clause-wise-chatbot.vercel.app/**
 
----
-
 ### 📂 Source Code
 
 Explore the complete source code on GitHub:
 
 👉 **https://github.com/gulhassan0599/clausewise**
 
----
-
-## ⭐ Quick Start
+### ⭐ Quick Start
 
 1. Open the live application.
 2. Upload a legal contract (PDF).
@@ -170,23 +166,19 @@ Explore the complete source code on GitHub:
 
 ClauseWise provides a complete AI-powered workflow for understanding legal contracts.
 
-## 📄 Smart PDF Upload
+### 📄 Smart PDF Upload
 
 - Upload text-based legal contracts in PDF format.
 - Fast text extraction using **pdf-parse**.
 - Memory-based processing with no permanent file storage.
 
----
-
-## 🛡️ Contract Validation
+### 🛡️ Contract Validation
 
 Before performing any analysis, ClauseWise verifies whether the uploaded document is actually a legal contract.
 
 If the document is not recognized as a contract, users receive a friendly explanation instead of inaccurate AI results.
 
----
-
-## 🤖 AI Contract Analysis
+### 🤖 AI Contract Analysis
 
 The AI automatically analyzes the uploaded document and generates:
 
@@ -198,9 +190,7 @@ The AI automatically analyzes the uploaded document and generates:
 - Potentially risky clauses
 - Recommendations
 
----
-
-## 🚨 Risk Detection
+### 🚨 Risk Detection
 
 ClauseWise identifies clauses that may expose users to unnecessary legal or financial risk.
 
@@ -219,9 +209,7 @@ Each risk includes:
 - Explanation
 - Why it matters
 
----
-
-## 📌 Important Clause Highlighting
+### 📌 Important Clause Highlighting
 
 Instead of reading dozens of pages, users receive the most important clauses summarized into an easy-to-read dashboard.
 
@@ -235,9 +223,7 @@ Examples include:
 - Intellectual Property
 - Dispute Resolution
 
----
-
-## 💬 Interactive AI Chatbot
+### 💬 Interactive AI Chatbot
 
 After analysis, users can ask follow-up questions such as:
 
@@ -248,9 +234,7 @@ After analysis, users can ask follow-up questions such as:
 
 The chatbot answers using only the uploaded contract as context, helping prevent hallucinations and unrelated responses.
 
----
-
-## 📑 Download Analysis Report
+### 📑 Download Analysis Report
 
 Users can generate a professional PDF report containing:
 
@@ -262,9 +246,7 @@ Users can generate a professional PDF report containing:
 
 The report can be saved or shared for future reference.
 
----
-
-## 🌙 Modern Responsive UI
+### 🌙 Modern Responsive UI
 
 - Fully responsive layout
 - Mobile-friendly design
@@ -272,9 +254,7 @@ The report can be saved or shared for future reference.
 - Glassmorphism-inspired interface
 - Smooth animations and transitions
 
----
-
-## 🔒 Privacy First
+### 🔒 Privacy First
 
 ClauseWise prioritizes user privacy.
 
@@ -289,7 +269,7 @@ ClauseWise prioritizes user privacy.
 
 Artificial Intelligence is the core of ClauseWise. Rather than simply extracting text from a PDF, the application uses a Large Language Model (LLM) to understand the contract, identify important legal information, assess potential risks, and explain everything in clear, beginner-friendly language.
 
-## How It Works
+### How It Works
 
 The AI workflow consists of several stages:
 
@@ -321,7 +301,7 @@ Context-Aware AI Chatbot
 
 ---
 
-## AI Analysis Responsibilities
+### AI Analysis Responsibilities
 
 The AI is instructed to:
 
@@ -336,9 +316,7 @@ The AI is instructed to:
 - Suggest practical recommendations.
 - Return structured JSON for reliable frontend rendering.
 
----
-
-## AI Chat Assistant
+### AI Chat Assistant
 
 Once analysis is complete, users can continue interacting with the contract through a conversational AI assistant.
 
@@ -351,9 +329,7 @@ The chatbot:
 - Explains legal concepts in simple language.
 - Avoids providing misleading legal advice.
 
----
-
-## Prompt Engineering
+### Prompt Engineering
 
 ClauseWise uses carefully designed system prompts to ensure consistent, safe, and reliable responses.
 
@@ -370,9 +346,7 @@ The prompts define:
 
 Instead of allowing free-form responses, the model is instructed to return structured JSON, making the application's analysis predictable and easy to display.
 
----
-
-## AI Model
+### AI Model
 
 | Component | Technology |
 |-----------|------------|
@@ -382,9 +356,7 @@ Instead of allowing free-form responses, the model is instructed to return struc
 | Output Format | Structured JSON |
 | Response Style | Professional, beginner-friendly, concise |
 
----
-
-## Why AI?
+### Why AI?
 
 Traditional keyword-based contract analysis can only detect predefined words or phrases.
 
@@ -398,11 +370,13 @@ ClauseWise uses an LLM because it can:
 
 This makes ClauseWise significantly more useful than a simple PDF parser or keyword scanner while remaining easy to use for everyday users.
 
+---
+
 # 🧠 System Prompt Summary
 
 ClauseWise uses carefully engineered system prompts to ensure the AI produces consistent, reliable, and safe responses. Rather than allowing unrestricted conversation, the AI is guided by explicit instructions that define its role, scope, response format, and behavior.
 
-## Primary Objectives
+### Primary Objectives
 
 The AI is instructed to:
 
@@ -417,9 +391,7 @@ The AI is instructed to:
 - Provide practical recommendations.
 - Return responses in a structured JSON format for frontend rendering.
 
----
-
-## Safety & Behavioral Rules
+### Safety & Behavioral Rules
 
 The system prompt ensures that the AI:
 
@@ -431,9 +403,7 @@ The system prompt ensures that the AI:
 - Maintains a professional, neutral, and unbiased tone.
 - Produces predictable, machine-readable responses.
 
----
-
-## Chatbot Constraints
+### Chatbot Constraints
 
 The conversational assistant follows additional rules to maintain relevance.
 
@@ -445,9 +415,7 @@ It:
 - Never invents clauses or legal facts.
 - Encourages users to consult qualified legal professionals for important legal decisions.
 
----
-
-## Structured Output
+### Structured Output
 
 Instead of generating free-form responses, the AI returns structured JSON containing:
 
@@ -594,31 +562,25 @@ ClauseWise/
 
 ---
 
-## 🏠 Landing Page
+### 🏠 Landing Page
 
 Displays the modern homepage where users can learn about ClauseWise and upload a contract for analysis.
 
 ![Landing Page](screenshots/landing-page.jpeg)
 
----
-
-## 📄 Upload & Analysis
+### 📄 Upload & Analysis
 
 Shows the contract upload interface and the generated AI analysis dashboard.
 
 ![Analysis Dashboard](screenshots/dashboard.png)
 
----
-
-## 🚨 Risk Detection
+### 🚨 Risk Detection
 
 Illustrates how ClauseWise highlights potentially risky clauses and explains why they matter.
 
 ![Risk Detection](screenshots/risk-analysis.png)
 
----
-
-## 💬 AI Chat Assistant
+### 💬 AI Chat Assistant
 
 Demonstrates the interactive chatbot answering questions about the uploaded contract.
 
@@ -630,9 +592,7 @@ Demonstrates the interactive chatbot answering questions about the uploaded cont
 
 Follow the steps below to run ClauseWise on your local machine.
 
----
-
-## 1. Prerequisites
+### 1. Prerequisites
 
 Ensure the following software is installed before starting:
 
@@ -649,9 +609,7 @@ npm -v
 git --version
 ```
 
----
-
-## 2. Clone the Repository
+### 2. Clone the Repository
 
 ```bash
 git clone https://github.com/gulhassan0599/clausewise.git
@@ -659,9 +617,7 @@ git clone https://github.com/gulhassan0599/clausewise.git
 cd clausewise
 ```
 
----
-
-## 3. Backend Setup
+### 3. Backend Setup
 
 Navigate to the server directory.
 
@@ -695,9 +651,7 @@ The backend will run on:
 http://localhost:5000
 ```
 
----
-
-## 4. Frontend Setup
+### 4. Frontend Setup
 
 Open a **new terminal**.
 
@@ -725,9 +679,7 @@ The frontend will run on:
 http://localhost:5173
 ```
 
----
-
-## 5. Open the Application
+### 5. Open the Application
 
 Visit:
 
@@ -760,9 +712,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 > **Important:** Never commit your `.env` file or API keys to GitHub.
 
----
-
-## Project Environment Structure
+### Project Environment Structure
 
 ```text
 server/
@@ -783,9 +733,7 @@ ClauseWise exposes a simple REST API for contract analysis and AI-powered conver
 | **POST** | `/api/contracts/analyze` | Uploads a contract PDF and returns the AI-generated analysis. |
 | **POST** | `/api/contracts/chat` | Sends a user question and receives a context-aware response about the uploaded contract. |
 
----
-
-## Analyze Contract
+### Analyze Contract
 
 **Endpoint**
 
@@ -818,9 +766,7 @@ Returns structured JSON containing:
 - Risky clauses
 - Recommendations
 
----
-
-## Chat With Contract
+### Chat With Contract
 
 **Endpoint**
 
@@ -860,7 +806,7 @@ application/json
 
 ClauseWise is designed with user privacy and responsible AI usage in mind.
 
-## Memory-Only File Processing
+### Memory-Only File Processing
 
 Uploaded PDF files are processed entirely in server memory using Multer's memory storage.
 
@@ -868,9 +814,7 @@ Uploaded PDF files are processed entirely in server memory using Multer's memory
 - Files are discarded immediately after processing.
 - No contract history is maintained.
 
----
-
-## No User Authentication
+### No User Authentication
 
 ClauseWise does not require:
 
@@ -880,15 +824,11 @@ ClauseWise does not require:
 
 Users can analyze contracts instantly without registration.
 
----
-
-## Secure API Key Management
+### Secure API Key Management
 
 Sensitive credentials such as the Groq API key are stored using environment variables and are never exposed to the client.
 
----
-
-## Responsible AI
+### Responsible AI
 
 The AI assistant follows strict behavioral guidelines.
 
@@ -900,9 +840,7 @@ It:
 - Avoids generating unsupported legal conclusions.
 - Clearly explains legal concepts in beginner-friendly language.
 
----
-
-## User Privacy
+### User Privacy
 
 ClauseWise respects user privacy by design.
 
@@ -916,9 +854,9 @@ ClauseWise respects user privacy by design.
 
 ✔ Secure communication between frontend and backend
 
----
-
 > **Disclaimer:** While ClauseWise helps users better understand legal contracts, it should be used as an informational tool only. Important legal decisions should always be reviewed by a qualified legal professional.
+
+---
 
 # 🚀 Future Improvements
 
@@ -930,13 +868,9 @@ ClauseWise is designed with scalability in mind. While the current version deliv
 
 Enable Optical Character Recognition (OCR) to analyze scanned contracts and image-based PDFs.
 
----
-
 ### 🌍 Multi-Language Support
 
 Allow users to upload contracts written in multiple languages and receive AI-generated analysis in their preferred language.
-
----
 
 ### 📄 Additional File Formats
 
@@ -946,8 +880,6 @@ Support additional document types, including:
 - Plain Text (.txt)
 - Rich Text Format (.rtf)
 
----
-
 ### 👤 User Authentication
 
 Introduce secure user accounts to enable:
@@ -956,13 +888,9 @@ Introduce secure user accounts to enable:
 - Contract history
 - Personalized dashboards
 
----
-
 ### 📚 Analysis History
 
 Allow users to revisit previously analyzed contracts without uploading them again.
-
----
 
 ### 📊 Advanced Risk Scoring
 
@@ -972,19 +900,13 @@ Enhance the current risk assessment by introducing:
 - Visual risk breakdowns
 - Comparative contract analysis
 
----
-
 ### ⚖️ Legal References
 
 Provide references to relevant legal principles or regulations where applicable, helping users better understand why certain clauses may be significant.
 
----
-
 ### 🔍 Clause Comparison
 
 Enable users to compare two contracts side-by-side to identify differences, modifications, and potential risks.
-
----
 
 ### 📱 Mobile Application
 
@@ -1002,33 +924,23 @@ Developing ClauseWise provided valuable experience in building a complete AI-pow
 
 One of the biggest challenges was designing prompts that produced consistent, structured, and reliable responses. Since LLMs can generate unpredictable outputs, prompt engineering was essential to ensure accurate contract analysis.
 
----
-
 ### Parsing AI Responses
 
 The frontend required structured JSON rather than free-form text. This required carefully designing prompts so the AI consistently returned machine-readable responses without additional formatting.
-
----
 
 ### PDF Processing
 
 Extracting text from contracts while preserving meaningful content required integrating a reliable PDF parsing solution and handling documents of varying structures.
 
----
-
 ### Context-Aware Chat
 
 Building a chatbot that answered only questions related to the uploaded contract required maintaining conversation context while preventing unrelated or hallucinated responses.
-
----
 
 ### Deployment
 
 Deploying the frontend and backend on separate platforms required configuring environment variables, CORS policies, and API communication between Vercel and Railway.
 
----
-
-## Key Learnings
+### Key Learnings
 
 Throughout this project, I strengthened my understanding of:
 
@@ -1068,6 +980,14 @@ If you discover a bug or have a feature suggestion, feel free to open an Issue i
 
 ---
 
+# ⚠️ Disclaimer
+
+ClauseWise is an educational AI application designed to help users better understand legal contracts by providing AI-generated summaries, explanations, and risk assessments.
+
+The information generated by ClauseWise is intended **for informational and educational purposes only** and should **not** be considered legal advice.
+
+---
+
 # 📄 License
 
 This project is licensed under the **MIT License**.
@@ -1075,14 +995,6 @@ This project is licensed under the **MIT License**.
 You are free to use, modify, and distribute this software in accordance with the terms of the MIT License.
 
 For more information, see the **LICENSE** file included in this repository.
-
----
-
-# ⚠️ Disclaimer
-
-ClauseWise is an educational AI application designed to help users better understand legal contracts by providing AI-generated summaries, explanations, and risk assessments.
-
-The information generated by ClauseWise is intended **for informational and educational purposes only** and should **not** be considered legal advice.
 
 While the application strives to provide accurate and helpful insights, AI-generated analyses may contain inaccuracies or omit important legal considerations. Users should not rely solely on the application's output when making legal or financial decisions.
 
